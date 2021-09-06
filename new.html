@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+   body{
+       width: 300px ;
+       height: 300px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-left:20%;
+       margin-top: 20%;
+       overflow:hidden;
+       margin-bottom:50px;
+       }
+       .card{
+           display: grid;
+           grid-template-columns: 300px;
+           grid-template-rows: 210px 210 80px;
+           grid-template-areas: "image" "text" "stats";
+           font-family: Arial, Helvetica, sans-serif;
+           border-radius: 18px;
+           background: white;
+           box-shadow: 5px 5px 15px green;
+           text-align: center;
+           transition: 0.5s ease;
+           cursor: pointer;
+           margin-bottom: 100px;
+       } 
+       .card-image{
+           grid-area: image;
+           background-image : url("https://images.news18.com/ibnlive/uploads/2021/07/1627377451_nature-1600x900.jpg");
+           border-top-left-radius:15px ;
+           border-top-right-radius: 15px;
+           background-size: cover;
+           height: 200px;
+           width: 300px;
+       
+        }
+
+       .card-text{
+           grid-area: text;
+           margin: 25px;
+           
+       }
+       .card-text.date{
+           color: rgb(255,7,110);
+           font-size: 13px;
+       }
+       .card-text p{
+           color: grey;
+           font-size: 15px;
+           font-weight: 300;
+       }
+       .card-text h2{
+           margin-top: 0;
+           font-size: 28px;
+        }
+
+       .card-stats{
+           grid-area: stats;
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           grid-template-rows:1fr ;
+           border-bottom-left-radius: 15px;
+           border-bottom-right-radius: 15px;
+           background: rgb(255,7,110);
+       }
+       .card-stats.stat{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           flex-direction: column;
+           padding: 10px;
+           color: white;
+
+       }
+       .card-stats.type{
+           font-size: 11px;
+           font-weight: 300;
+           text-transform: uppercase;
+       }
+       .card-stats .value{
+           font-size: 22px;
+           font-weight: 500;
+       }
+       .card-stats .border{
+           border-left: 1px solid rgb(153, 97, 97);
+           border-right: 1px solid rgb (153, 97, 97);
+       }
+       .card-stats.value sup{
+           font-size: 14px;
+       }
+       .card:hover{
+           transform: scale(1.1);
+           box-shadow: 5px 5px 15px orangered;
+       }
+       
+
+
+
+</style>
+</head>
+<body>
+   <div class="card">
+     <div class="card-image"></div>
+      <div class="card-text">
+         <span class="date">3 days ago</span>
+         <h2>Post One</h2>
+         <p>Est odit maiores in magnam fuga cum minus corporis a aperiam explicabo? Est harum praesentium eos sint quos qui harum reprehenderit eum quod dolor et dolorem rerum et cumque eius.
+
+         </p>
+
+      </div>
+     <div class="card-stats">
+         <div class="stat">
+            <div class="value"> 4<sup>m</sup></div>
+            <div class="type"> read</div>
+         </div>
+         <div class="stat-border">
+            <div class="value"> 5000</div>
+            <div class="type"> views</div>
+         </div>
+         <div class="stat">
+            <div class="value"> 32</div>
+            <div class="type">comments</div>
+         </div>
+
+
+       </div>  
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>
